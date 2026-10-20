@@ -1,0 +1,279 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    background-color: #f3f0f8;
+}
+
+#app {
+    min-height: 100vh;
+}
+
+/* MENU PRINCIPAL */
+
+.principal {
+    width: 90%;
+    max-width: 850px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.encabezado-inicio {
+    background-color: #343434;
+    color: white;
+    padding: 35px 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.encabezado-inicio .titulo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.presentacion {
+    padding: 30px 15px 20px;
+}
+
+.presentacion .titulo {
+    font-size: 27px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.presentacion .texto {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.opciones {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 10px 20px 30px;
+}
+
+.tarjeta {
+    width: 50%;
+    padding: 30px 20px;
+    background-color: white;
+    border: 1px solid #e1d7ed;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #00000014;
+}
+
+.numero-ejercicio {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eadcfb;
+    color: #6941a5;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tarjeta .subtitulo {
+    font-size: 19px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* ENLACES */
+
+.enlace {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #6941a5;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.enlace:hover {
+    background-color: #4d2d7e;
+}
+
+/* MENU DE NAVEGACION */
+
+.menu {
+    background-color: white;
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu .enlace {
+    background-color: transparent;
+    color: #2876bd;
+    padding: 5px;
+}
+
+.menu .enlace:hover {
+    color: #15466f;
+}
+
+/* EJERCICIO 2: GALERIA */
+
+.galeria {
+    width: 85%;
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 35px 20px;
+    background-color: #f3f0fb;
+}
+
+.titulo-galeria {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 180px));
+    justify-content: center;
+    gap: 30px;
+}
+
+.diseno {
+    width: 100%;
+    text-align: center;
+}
+
+.diseno img {
+    display: block;
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+}
+
+.diseno .texto {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #333;
+}
+
+.volver {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.volver .enlace {
+    background-color: #343434;
+}
+
+/* EJERCICIO 3: SERVICIOS */
+
+.contenido-servicios {
+    width: 80%;
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: white;
+}
+
+.titulo-servicios {
+    color: #7195a3;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.introduccion {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.lista-servicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 35px;
+}
+
+.servicio {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.servicio img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.servicio .subtitulo {
+    color: #7195a3;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.servicio .texto {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.botones-servicios {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.botones-servicios .enlace {
+    background-color: #3676a0;
+    border-radius: 0;
+    font-size: 12px;
+}
+
+.botones-servicios .enlace:hover {
+    background-color: #285777;
+}
+
+/* ADAPTACION A PANTALLAS PEQUENAS */
+
+@media (max-width: 650px) {
+    .opciones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjeta {
+        width: 100%;
+    }
+
+    .contenedor-galeria {
+        grid-template-columns: repeat(2, minmax(0, 180px));
+        gap: 20px;
+    }
+
+    .contenido-servicios {
+        width: 92%;
+    }
+
+    .lista-servicios {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado-inicio .titulo {
+        font-size: 26px;
+    }
+}
